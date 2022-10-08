@@ -2,6 +2,8 @@
 Shy : Sasha S, Henry B, Yuki F
 SoftDev
 Oct 2022
+Time spent: 1.0 hr
+
 DISCO:
     - The return type must be a string, dict, list, tuple with headers or status,
     Response instance, or WSGI callable, but it was a JpegImageFile
@@ -46,11 +48,13 @@ data = readFile()
 
 @app.route("/")
 def print_to_screen():
-
+    rand_job = (str)(randOccupation())
+    job_for_link = rand_job.replace(" ", "-").replace(",", "")
+    link = "<a href = https://www.wikipedia.org/w/index.php?search=" + job_for_link + ">" + rand_job + "</a>"
     return (
-    "<center><h1>Shy: Sasha, Henry, Yuki</h1> <br><br>" +
-    "<img src='/static/OIP.jpeg'> </center><br><br>"
-    + str(data) + "<br><br>" + "<b><center> Random Job: " + randOccupation() + "</center></b>")
+    "<center><h1>Shy: Sasha, Henry, Yuki</h1>" +
+    "<img src='/static/OIP.jpeg'> <h2> List of Occupations: </h2> </center>"
+    + str(data) + "<br><br> <b><center> Random Job: " + link + "</center></b>")
 
 if __name__ == "__main__":
     app.debug = True
