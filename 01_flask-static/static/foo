@@ -1,0 +1,10 @@
+this hurrr some plaintext tho
+
+Q: What happens when you access this file
+     via
+      http://localhost:5000/static/foo 
+     ?
+
+     http://localhost:5000/static/OIP.jpeg //tester to see if it will prompt us to download or just to view the image- the truth is the latter
+     
+     
