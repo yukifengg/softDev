@@ -1,4 +1,10 @@
-Q0: What will happen if you remove render_template from this line? (log your prediction before you pull the trigger...)
+Shy: Sasha, Henry, Yuki
+SoftDev
+13 Oct 2022
+Time spent: 0.75 hr
+
+Q0: What will happen if you remove render_template 
+from this line? (log your prediction before you pull the trigger...)
 A0: If render_template is removed, hello_world() will run but test_tmplt() will raise an error
 
 Q1: Can all of your teammates confidently predict the URL to use to load this page?
