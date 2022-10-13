@@ -1,0 +1,9 @@
+Q0: What will happen if you remove render_template from this line? (log your prediction before you pull the trigger...)
+A0: If render_template is removed, hello_world() will run but test_tmplt() will raise an error
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+A1: Yes.. We can. http://127.0.0.1:5000/my_foist_template
+
+Q2: What is the significance of each argument? Simplest, most concise answer best.
+A2: 
+'model_tmplt.html' refers to the html file being run.           'foo="fooooo"' makes the title of the website fooooo. 'collection="coll" makes coll the iterable list.
