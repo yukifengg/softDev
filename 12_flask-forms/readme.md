@@ -12,7 +12,7 @@ DISCO:\
       <input type="submit" name="sub1">
     </form>
     ```
-* ```request.args``` and ```request.form``` are mutually exclusive.
+* ```request.args``` and ```request.form``` are mutually exclusive.\
 \
 QCC:\
 * What exactly differentiates args vs form or are they methods that perform the same function but display the data differently?
