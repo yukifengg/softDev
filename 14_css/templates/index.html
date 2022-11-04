@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <!--
 Metamorphosis: Eric Sohel, Yuki Feng, Maya Mori, Aleksandra Shifrina
 SoftDev
-k13 -- intro to CSS
-2022-10-18
-time spent: 1.5
+k14 -- CSS in Flask
+2022-10-19
+time spent: 0.3 
  -->
 
 <!-- <html lang="en" style="font-family:sans-serif; background:DimGrey"> -->
@@ -13,9 +12,10 @@ time spent: 1.5
 
   <head>
     <meta charset="utf-8">
-    <title> k14 </title>
-    <link href="static/style.css" rel="stylesheet" type="text/css" />
+    <title> k13 </title>
+    <!-- <link href="mimic.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link rel=“stylesheet” type=“text/css” href=“mimic.css” /> -->
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" />
 
       <!-- <style>
         h1 {
