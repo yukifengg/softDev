@@ -7,9 +7,8 @@ time spent: 0.8
 '''
 
 from flask import Flask             #facilitate flask webserving
-from flask import requests
+from flask import request, redirect
 from flask import session
-from flask import render_template 
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
