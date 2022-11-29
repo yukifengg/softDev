@@ -1,0 +1,13 @@
+TPNG: JoY
+ROSTER: Yuki Feng (Ben), Joshua Liu (Vengeful Whale)
+Time Spent: 1.5
+
+- Yuki likes the purple color scheme for Bootstrap. Matches her hair!
+- Josh sighs a lot
+- Supported browsers are Chrome, Firefox, iOS, Safari
+- the Navbar component uses Sass and CSS variables in the color schemes for their navbars
+    - default is light navbar for use with light background colors
+- Scrollspy toggles the .active class on anchor (<a>) elements when the element with the id referenced by the anchor’s href is scrolled into view. 
+    - basically, it "spies" on the specified element and can highlight based on the scroll position to indicate which link is currently being viewed.
+    - used in conjuction most commonly with navbar and list items
+- 
