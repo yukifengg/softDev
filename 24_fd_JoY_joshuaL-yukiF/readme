@@ -1,0 +1,15 @@
+TPNG: JoY
+ROSTER: Yuki Feng (Ben), Joshua Liu (Vengeful Whale)
+Time Spent: 1.5
+
+- Yuki likes the purple color scheme for Bootstrap. Matches her hair!
+- Josh sighs a lot
+- Supported browsers are Chrome, Firefox, iOS, Safari
+- the Navbar component uses Sass and CSS variables in the color schemes for their navbars
+    - default is light navbar for use with light background colors
+- Scrollspy toggles the .active class on anchor (<a>) elements when the element with the id referenced by the anchor’s href is scrolled into view. 
+    - basically, it "spies" on the specified element and can highlight based on the scroll position to indicate which link is currently being viewed.
+    - used in conjuction most commonly with navbar and list items
+- Spinners: Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
+    - Bootstrap “spinners” can be used to show the loading state in your projects. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
+- All Bootstrap colors are available as Sass variables and a Sass map in scss/_variables.scss file. To avoid increased file sizes, we don’t create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a theme palette.
