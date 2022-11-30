@@ -4,73 +4,163 @@ ROSTER: Yuki Feng, Joshua Liu
 K23: A Day of Noodling
 DISCO:
 QCC:
-Time Spent: 1.5
+Time Spent: 3
 -->
-
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JoY</title>
-    <!-- insert CDN connection  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-    crossorigin="anonymous">
-  </head>
-  <body>
-    <nav id="navbar" class="navbar bg-light px-3 mb-3">
-      <a class="navbar-brand" href="#">JoY: Josh & Yuki</a>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="#scrollspy">Scrollspy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#cards">Cards</a>
-        </li>
-      </ul>
-    </nav>
-    <center>
-      <h1>TNPG: JoY- Joshua Liu (Vengeful Whale), Yuki Feng (Ben) </h1>
-      <h2>What we learned:</h2>
-    </center>
-    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
-      <ol>
-        <li> Navbar Component: Bootstrap’s powerful, responsive navigation header, the navbar. Includes 
-          support for branding, navigation, and more, including support for our collapse plugin. </li>
-        <li id="scrollspy"> Scrollspy Component: Automatically update Bootstrap navigation or list group components based 
-          on scroll position to indicate which link is currently active in the viewport. </li>
-        <li id="cards">
-          Cards Component: Bootstrap’s cards provide a flexible and extensible content container with 
-          multiple variants and options.
-          <div>
-            <div class="card" style="width: 18rem; float: left; margin: 10px;">
-            <img src="https://slm-assets.secondlife.com/assets/20692835/lightbox/green_dilf_MP.jpg?1527698939" class="card-img-top" alt="image of dad with green DILF shirt">
-              <div class="card-body">
-                <p class="card-text">DEVOTED, INVOLVED, LOVING FATHER.</p>
-              </div>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JoY</title>
+        <!-- insert CDN connection  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+        crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    </head>
+    <body class="p-3 mx-auto bg-white">
+        <div class="w-75" style="height: 500px; margin: auto">
+            <div class="p-2 container-fluid">
+                <nav id="navb" class="navbar navbar-expand-lg bg-light" style="--bs-bg-opacity: .6">
+                        <a class="navbar-brand" href="#">JoY</a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Intro">Intro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Color">Color</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Cards">Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Spinner">Spinner</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Something">Something</a>
+                                </li>
+                            </ul>
+                        </div>
+                </nav>
             </div>
-            <div class="card" style="width: 18rem; float: left; margin: 10px;">
-              <img src="https://cdn.shopify.com/s/files/1/0702/9411/products/tee_template4_ca6b3514-2e21-4a1e-b652-b5682e37e664_grande.jpg?v=1640746814" class="card-img-top" alt="image of Damn I Love Frogs DILF shirt">
-              <div class="card-body">
-                <p class="card-text">Damn I Love Frogs</p>
-              </div>
+            <div class="scrollspy h-100 bg-dark text-white p-3" style="overflow-y:scroll" data-bs-spy="scroll" data-bs-target="#navb" data-bs-smooth-scroll="true" tabindex="0">
+                <div id="Intro">
+                    <h4>Intro</h4>
+                    <p>TNPG: JoY- Joshua Liu (Vengeful Whale), Yuki Feng (Ben)
+                        <br>
+                        What we learned: <br>
+                        Color: Background colors and text colors can be easily changed in the class of the element.
+                        Navbar Component: Bootstrap’s powerful, responsive navigation header, the navbar. Includes 
+                        support for branding, navigation, and more, including support for our collapse plugin. <br>
+                        Scrollspy Component: Automatically update Bootstrap navigation or list group components based 
+                        on scroll position to indicate which link is currently active in the viewport. <br>
+                        Cards Component: Bootstrap’s cards provide a flexible and extensible content container with 
+                        multiple variants and options.
+                    </p>
+                </div>
+                <div id="Color">
+                    <h4>Color</h4>
+                    <p>
+                        .bg-color can be used to set the Background of the element. 
+                        <br> For Example, if you wanted the Background of a div to blue: <br> 
+                        &lt;div class="bg-primary"&gt; . . . &lt;/div&gt; 
+                        Bootstrap doesn't have every color readily available, but they do have: <br>
+                        <ul>
+                            <li> primary > blue </li>
+                            <li> secondary > gray-600 </li>
+                            <li> success > green </li>
+                            <li> info > cyan </li>
+                            <li> warning > yellow </li>
+                            <li> danger > red </li>
+                            <li> light > gray-100 </li>
+                            <li> dark > gray-900 </li>
+                        </ul>
+                        Additionally, .text-color can be used to change the color of the text in the element, For Example: <br>
+                        &lt;div class="bg-primary text-white"&gt; . . . &lt;/div&gt; &nbsp;&nbsp;&nbsp;--- > Blue Background, white text<br>
+                        &lt;p class="text-secondary"&gt; . . . &lt;/p&gt;  &nbsp;&nbsp;&nbsp;--- > Grey text
+                    </p>
+                </div>
+                <div id="Cards">
+                    <h4>Cards</h4>
+                    <p>
+                        Bootstrap’s cards provide a flexible and extensible content container with 
+                        multiple variants and options. <br>
+                        They can have images and captions, comprised of separate divs for the image and the text.
+                    </p>
+                    <div style="color:black; display: inline-flex;">
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://i.pinimg.com/originals/d0/8b/6c/d08b6c1a8896ddf9549a6182f348fd16.jpg" class="card-img-top" alt="image of Neymar Jr's emoji tattoos">
+                                <div class="card-body">
+                                    <p class="card-text">Neymar's tattoos...</p>
+                                </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/410/685/b39.jpg" class="card-img-top" alt="image of emo wolf">
+                            <div class="card-body">
+                                <p class="card-text">Emo wolf.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/418/818/49a.jpg" class="card-img-top" alt="image of dog side-eyeing camera">
+                                <div class="card-body">
+                                    <p class="card-text">Uh huh...</p>
+                                </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://slm-assets.secondlife.com/assets/20692835/lightbox/green_dilf_MP.jpg?1527698939" class="card-img-top" alt="image of dad with green DILF shirt">
+                                <div class="card-body">
+                                    <p class="card-text">DEVOTED, INVOLVED, LOVING FATHER.</p>
+                                </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://cdn.shopify.com/s/files/1/0702/9411/products/tee_template4_ca6b3514-2e21-4a1e-b652-b5682e37e664_grande.jpg?v=1640746814" class="card-img-top" alt="image of Damn I Love Frogs DILF shirt">
+                            <div class="card-body">
+                                <p class="card-text">Damn I Love Frogs</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://pbs.twimg.com/media/FamUx6ZakAA7TPA.jpg" class="card-img-top" alt="image of werewolf ripping off shirt">
+                                <div class="card-body">
+                                    <p class="card-text">Changing for gym tbh</p>
+                                </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://i0.wp.com/tshirtatlowprice.com/wp-content/uploads/2021/05/DILF-T-Shirt-Dad-In-Love-With-Farting.png" class="card-img-top" alt="image of dad with black Dad In Love with Farting (DILF) shirt">
+                            <div class="card-body">
+                                <p class="card-text">Dad In Love (with) Farting</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem; float: left; margin: 10px;">
+                            <img src="https://images.lookhuman.com/render/standard/9438894460506221/97100-athletic_gray-md-t-dilf-damn-i-love-fishing.jpg" class="card-img-top" alt="image of Damn I Love Fishing DILF shirt">
+                            <div class="card-body">
+                                <p class="card-text">Damn I Love Fishing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Spinner">
+                    <h4>SPINNERS</h4>
+                    <p>
+                        Spinners are cool and should be used whenever possible:
+                    </p>
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p>
+                        This is accomplised by using .spinner-border in a div, and having a hidden element inside of it: <br>
+                        &lt;div class="spinner-border" role="status"&gt; HIDDEN ELEMENT &lt;/div&gt; &nbsp;&nbsp;&nbsp; <br>
+                        If the element is not hidden:
+                    </p>
+                    <div class="spinner-border" role="status">
+                        <span>Loading...</span>
+                    </div>
+                    <p>
+                        Pretty cool in its own right.
+                    </p>
+                </div>
             </div>
-            <div class="card" style="width: 18rem; float: left; margin: 10px;">
-              <img src="https://i0.wp.com/tshirtatlowprice.com/wp-content/uploads/2021/05/DILF-T-Shirt-Dad-In-Love-With-Farting.png" class="card-img-top" alt="image of dad with black Dad In Love with Farting (DILF) shirt">
-              <div class="card-body">
-                <p class="card-text">Dad In Love (with) Farting</p>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem; float: left; margin: 10px;">
-              <img src="https://images.lookhuman.com/render/standard/9438894460506221/97100-athletic_gray-md-t-dilf-damn-i-love-fishing.jpg" class="card-img-top" alt="image of Damn I Love Fishing DILF shirt">
-              <div class="card-body">
-                <p class="card-text">Damn I Love Fishing</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </body>
+        </div>
+    </body>
 </html>
