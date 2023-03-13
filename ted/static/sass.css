@@ -1,6 +1,18 @@
 body {
+  background-color: #c69;
   font: 100% Helvetica, sans-serif;
-  color: #333;
+  color: white;
+}
+
+#header {
+  background-color: white;
+  justify-content: center;
+  position: sticky;
+  margin-top: 0%;
+  margin: 0;
+  width: 100%;
+  max-height: 30%;
+  padding: 20px;
 }
 
 nav ul {
