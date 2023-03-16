@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SASS TED TALK</title>
+        <link rel="stylesheet" href="../static/sass.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="../static/sass-logo.png" alt="Sass logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#Installation">Installation</a></li>
+                <li><a href="#Intro to Sass">Syntax</a></li>
+                <li><a href="#Nesting">Nesting</a></li>
+                <li><a href="#Interpolation">Interpolation</a></li>
+                <li><a href="#At Rules">At Rules</a></li>
+                <li><a href="#Operators">Operators</a></li>
+                <li><a href="#Modules">Modules</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h1 id="Installation"> Installation </h1>
+            <img src="../static/wig-install.gif">
+            <h2> Command Line </h2>
+            <h3>Install Anywhere (Standalone)</h3>
+            You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.
+            <h3>Install on Windows (Chocolatey) </h3>
+            If you use the Chocolatey package manager for Windows, you can install Dart Sass by running
+            <pre>
+                <code>
+                    choco install sass
+                </code>
+            </pre>
+            <h3> Install on Mac OS X or Linux (Homebrew) </h3>
+            If you use the Homebrew package manager for Mac OS X or Linux, you can install Dart Sass by running
+            <pre>
+                <code>
+                    brew install sass/sass/sass
+                </code>
+            </pre>
+        </div> <!-- end installation -->
+
+        <div>
+            <h1 id="Intro to Sass"> Intro to Sass </h1>
+            <p>
+            Sass has features that don't exist in CSS yet like nesting, mixins, inheritance, and other nifty goodies that help you write robust, maintainable CSS.
+            </p>
+            <h2>Two Syntaxes</h2>
+            <!--The SCSS syntax (.scss) is used most commonly. 
+                It's a superset of CSS, which means all valid CSS is also valid SCSS. 
+                The indented syntax (.sass) is more unusual: it uses indentation rather than curly braces to nest statements, and newlines instead of semicolons to separate them. 
+                All our examples are available in both syntaxes. -->
+            <ul><code>.scss</code> - most common</ul> 
+            <ul><code>.sass</code> - more unusual, indented syntax</ul>
+            SASS <b>CANNOT</b> be read/understood by browsers
+            To make this work, you must compile sass into css by using this command: 
+            <pre>
+                <code>
+                    sass --watch input.scss output.css
+                </code>
+            </pre>
+            <h2>Partials</h2>
+            <p>
+                You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files.
+                This is a great way to modularize your CSS and help keep things easier to maintain.
+                A partial is a Sass file named with a leading underscore.
+                Basically like functions. Code a css snippet in a partial and then you can reference that partial in the main css file.
+            </p>
+            <h2>Variables</h2>
+            Sass uses the $ symbol to make something a variable. (key feature)
+
+            Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same.
+            CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.
+            Variables that are defined by a built-in module cannot be modified.
+            
+            <div class="btn-group">
+                <div class="firstFlop">
+                    <button>Normal CSS 1</button>
+                </div>
+    
+                <div class="secondFlop">
+                    <button>Normal CSS 2</button>
+                </div>
+    
+                <div class="uno">
+                    <button>SASSY Button 1</button>
+                </div>
+    
+                <div class="dos">
+                    <button>SASSY Button 2</button>
+                </div>
+            </div> <!-- end btn grp -->
+        </div> <!-- end intro to SASS -->
+
+        <div>
+            <h1 id="Nesting"> Nesting </h1>
+            <img src="../static/bird-nest.jpg">
+            <p>
+                Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
+                Be aware that overly nested rules will result in overqualified CSS that could prove hard to maintain and is generally considered bad practice.
+            </p>
+	        <br>For ex: If you have multiple buttons, you can combine all of them under one class in sass and have sub classes for each type button
+            <br>Either use indent or &
+            <table>
+                <th>
+                    <pre>
+                        <code>
+                            .button {
+                                .sucess {
+                                    color: green;
+                                }
+                            }
+                        </code>
+                    </pre>
+                </th>
+                <th>
+                    <pre>
+                        <code>
+                            .btn {
+                                &:focus {}
+                                &:hover {}
+                                &:active {}
+                            }
+                        </code>
+                    </pre>
+                </th>
+            </table>
+        </div> <!-- end nesting -->
+
+        <div>
+            <h1 id="Interpolation">Interpolation </h1>
+            <p>
+                Interpolation can be used almost anywhere in a Sass stylesheet to embed the result of a SassScript expression into a chunk of CSS. 
+                Just wrap an expression in #{} in any of the following places:
+            </p>
+            <h2>SassScript</h2>
+            <p>
+                Interpolation can be used in SassScript to inject SassScript into unquoted strings.
+                This is particularly useful when dynamically generating names (for example for animations), or when using slash-separated values.
+                Note that interpolation in SassScript always returns an unquoted string.
+            </p>
+            <h2>Quoted Strings</h2>
+            <p>
+                In most cases, interpolation injects the exact same text that would be used if the expression were used as a property value.
+                But there is one exception: the quotation marks around quoted strings are removed (even if those quoted strings are in lists). 
+                This makes it possible to write quoted strings that contain syntax that’s not allowed in SassScript (like selectors) and interpolate them into style rules.
+            </p>
+        </div> <!-- end interpolation -->
+        
+        <div>
+            <h1 id="At Rules">At Rules</h1>
+            <h2> Mix-Ins</h2>
+                MIXINS: do you have css classes with similar styles? Well you can create one “mixin” class with @mixin and include  which can then be used in tandem with the new classes you create
+                @mixin can take variables
+            <h2>Use</h2>
+                @use loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
+            <h2>Forward</h2>
+                @forward loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded with the @use rule.
+            <h2>Import</h2>
+                @import extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets.
+            <h2>Include</h2>
+                @include makes it easy to re-use chunks of styles.
+            <h2>Function</h2>
+                @function defines custom functions that can be used in SassScript expressions.
+                <!-- Rounded switch -->
+                <!-- <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label> -->
+            <h2>Extend</h2>
+                @extend allows selectors to inherit styles from one another.
+            <h2>At-Root</h2>
+                @at-root puts styles within it at the root of the CSS document.
+            <h2>Error</h2>
+                @error causes compilation to fail with an error message.
+            <h2>Warn</h2>
+                @warn prints a warning without stopping compilation entirely.
+            <h2>Debug</h2>
+            @debug prints a message for debugging purposes.
+            <h2>Flow Control</h2>
+            Flow control rules like @if, @each, @for, and @while control whether or how many times styles are emitted.
+            <table>
+                <th>@if controls whether or not a block is evaluated.</th>
+                <th>@each evaluates a block for each element in a list or each pair in a map.</th>
+                <th>@for evaluates a block a certain number of times.</th>
+                <th>@while evaluates a block until a certain condition is met.</th>
+            </table>
+        </div> <!-- end mix-ins -->
+        <div>
+            <h1 id="Operators">Operators</h1>
+            <p> 	
+                Sass supports a handful of useful operators for working with different values.
+                These include the standard mathematical operators like + and *, as well as operators for various other types:
+                <li>== and != are used to check if two values are the same.</li>
+                <li>+, -, *, /, and % have their usual mathematical meaning for numbers, with special behaviors for units that matches the use of units in scientific math.</li>
+                <li><, <=, >, and >= check whether two numbers are greater or less than one another.</li>
+                <li>and, or, and not have the usual boolean behavior. Sass considers every value “true” except for false and null.</li>
+                <li>+, -, and / can be used to concatenate strings.</li>
+            </p>
+        </div> <!-- end operators -->
+
+        <div>
+            <h1 id="Modules">Modules</h1>
+            <p>
+                Sass provides many built-in modules which contain useful functions (and the occasional mixin).
+                These modules can be loaded with the @use rule like any user-defined stylesheet, 
+                and their functions can be called like any other module member. 
+                All built-in module URLs begin with sass: to indicate that they're part of Sass itself.
+            </p>
+            Sass provides the following built-in modules:
+            <li>The sass:math module provides functions that operate on numbers.</li>
+            <li>The sass:string module makes it easy to combine, search, or split apart strings.</li>
+            <li>The sass:color module generates new colors based on existing ones, making it easy to build color themes.</li>
+            <li>The sass:list module lets you access and modify values in lists.</li>
+            <li>The sass:map module makes it possible to look up the value associated with a key in a map, and much more.</li>
+            <li>The sass:selector module provides access to Sass’s powerful selector engine.</li>
+            <li>The sass:meta module exposes the details of Sass’s inner workings.</li>
+        </div> <!-- end modules -->
+        
+    </body>
+</html>

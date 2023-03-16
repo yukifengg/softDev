@@ -1,36 +1,146 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
-$sl-color--hopbush: #c69;
+$hopbush: #c69;
+$mother-Btn: rgb(185, 255, 255);
+$btn-Size: 25%;
 
 body {
-  background-color: $sl-color--hopbush;
   font: 100% $font-stack;
-  color: white;
-}
-
-#header {
-  background-color: white;
-  justify-content: center;
-  position: sticky;
-  margin-top: 0%;
-  margin: 0;
-  width: 100%;
-  max-height: 30%;
-  padding: 20px;
 }
 
 nav {
+  background-color: $hopbush;
+  color: $primary-color;
+  width: auto;
     ul {
+      list-style-type: none;
       margin: 0;
       padding: 0;
-      list-style: none;
+      overflow: hidden;
+      background-color: $hopbush;
+      position: sticky;
+      top: 0;
     }
-  
-    li { display: inline-block; }
-  
-    a {
+    
+    li {
+      float: left;
+    }
+    
+    li a {
       display: block;
-      padding: 6px 12px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
     }
+    
+    li a:hover {
+      background-color: teal;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+}
+#header {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
+  padding: 20px;
+}
+
+.uno button {
+  background: $mother-Btn;
+  width: $btn-Size;
+  display: inline;
+}
+
+.dos button {
+  background: $mother-Btn;
+  width: $btn-Size;
+  display: inline;
+}
+
+.firstFlop button {
+  background:rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.secondFlop button {
+  background:rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.btn-group button {
+  float: left;
+  padding: 10px 24px;
+}
+
+.subunit button{
+  padding: 10px 24px;
+}
+
+img {
+  width: 50%;
+}
+
+switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+input{
+  .slider {
+    :checked{
+      background-color: #2196F3;
+    }
+    :before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  }
+  :focus {
+    box-shadow: 0 0 1px #2196F3;
+  }
+}
+.slider.round {
+  border-radius: 34px;
+  ::before {
+    border-radius: 50%;
+  }
+}
