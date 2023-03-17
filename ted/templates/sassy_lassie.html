@@ -24,10 +24,16 @@
 
         <div>
             <h1 id="Installation"> Installation </h1>
-            <img src="../static/wig-install.gif">
             <h2> Command Line </h2>
             <h3>Install Anywhere (Standalone)</h3>
-            You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.
+            <div class="container">
+                <div class="image">
+                    <img src="../static/wig-install.gif">
+                </div>
+                <div class="text">
+                    <p>You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.</p>
+                </div>
+            </div>
             <h3>Install on Windows (Chocolatey) </h3>
             If you use the Chocolatey package manager for Windows, you can install Dart Sass by running
             <pre>
@@ -65,18 +71,44 @@
             </pre>
             <h2>Partials</h2>
             <p>
-                You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files.
-                This is a great way to modularize your CSS and help keep things easier to maintain.
-                A partial is a Sass file named with a leading underscore.
-                Basically like functions. Code a css snippet in a partial and then you can reference that partial in the main css file.
+                "partial" sass files contain:
+                <ul> Little snippets of CSS which can be included in other Sass files </ul>
+                <ul> Modularize your CSS, keeping things easier to maintain</ul>
+                <ul> Named with a leading underscore </ul>
+                <pre>
+                    <code>
+                        _partial.scss
+                    </code>
+                </pre>
+                <!--Basically like functions. Code a css snippet in a partial and then you can reference that partial in the main css file.-->
             </p>
             <h2>Variables</h2>
-            Sass uses the $ symbol to make something a variable. (key feature)
+            <p>
+            Sass allows for the use of variables, which can reference colors, numbers, strings, etc. </p>
+            <ul>Use the $ to declare and reference a variable</ul>
+            <pre>
+                <code>
+                    $logo-color: #ff00bb
+                </code>
 
-            Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same.
-            CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.
-            Variables that are defined by a built-in module cannot be modified.
-            
+                ...which can then be referenced as:
+
+                <code>
+                    button {
+                        background: $logo-color;
+                    }
+
+                    h2 {
+                        color: $logo-color;
+                    }
+                </code>
+            </pre>
+            <ul>Imperative: </ul>
+            <ul><li>Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same.</li></ul>
+            <ul><li>CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.</li></ul>
+            <ul>Variables that are defined by a built-in module cannot be modified.</ul>
+            </p>
+            <h3>Example of variable use:</h3>
             <div class="btn-group">
                 <div class="firstFlop">
                     <button>Normal CSS 1</button>
@@ -98,10 +130,10 @@
 
         <div>
             <h1 id="Nesting"> Nesting </h1>
-            <img src="../static/bird-nest.jpg">
+            <img src="../static/bird-nest.jpg" style="width:300px;height:auto;" >
             <p>
-                Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
-                Be aware that overly nested rules will result in overqualified CSS that could prove hard to maintain and is generally considered bad practice.
+                <ul>Nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</ul>
+                <ul>Overly nested rules will result in overqualified CSS</ul> <!--hard to maintain and considered bad practice-->
             </p>
 	        <br>For ex: If you have multiple buttons, you can combine all of them under one class in sass and have sub classes for each type button
             <br>Either use indent or &
