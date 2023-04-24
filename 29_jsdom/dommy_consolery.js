@@ -1,4 +1,4 @@
-// Team Turing Testers :: Ayman Habib, Ryan Lau
+// Team Ctrl Alt Defeat :: Yuki, Brian
 // SoftDev pd8
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2023-04-17
