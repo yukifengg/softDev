@@ -1,47 +1,21 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 $hopbush: #c69;
+$nebula: #d2e1dd;
 $mother-Btn: rgb(185, 255, 255);
 $btn-Size: 25%;
 
 body {
   font: 100% $font-stack;
+  background-color: $nebula;
 }
 
 nav {
   background-color: $hopbush;
   color: $primary-color;
   width: auto;
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: $hopbush;
-      position: sticky;
-      top: 0;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: teal;
-    }
-    
-    .active {
-      background-color: #4CAF50;
-    }
 }
+
 #header {
   img {
     display: block;
@@ -143,4 +117,30 @@ input{
   ::before {
     border-radius: 50%;
   }
+}
+
+.message-main {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message 
+{
+  @extend .message-main;
+}
+.success
+{
+  @extend .message-main;
+  border-color: green
+}
+.error
+{
+  @extend .message-main;
+  border-color: red;
+}
+.warning
+{
+  @extend .message-main;
+  border-color: yellow;
 }

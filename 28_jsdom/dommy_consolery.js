@@ -101,6 +101,7 @@ var fib = function(n) {
   }
   return fib(n - 1) + fib(n - 2)
 }
+
 // FAC
 var fact = function(n) {
   if (n < 2) {

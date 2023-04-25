@@ -1,36 +1,12 @@
 body {
   font: 100% Helvetica, sans-serif;
+  background-color: #d2e1dd;
 }
 
 nav {
   background-color: #c69;
   color: #333;
   width: auto;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #c69;
-  position: sticky;
-  top: 0;
-}
-nav li {
-  float: left;
-}
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-nav li a:hover {
-  background-color: teal;
-}
-nav .active {
-  background-color: #4CAF50;
 }
 
 #header {
@@ -132,6 +108,24 @@ input :focus {
 }
 .slider.round ::before {
   border-radius: 50%;
+}
+
+.message-main, .warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
 }
 
 /*# sourceMappingURL=sass.css.map */

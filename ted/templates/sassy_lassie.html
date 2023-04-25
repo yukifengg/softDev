@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SASS TED TALK</title>
         <link rel="stylesheet" href="../static/sass.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
         <div id="header">
-            <img src="../static/sass-logo.png" alt="Sass logo">
+            <img src="../static/images/sass-logo.png" alt="Sass logo">
         </div>
         
-        <nav>
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#Installation">Installation</a></li>
-                <li><a href="#Intro to Sass">Syntax</a></li>
-                <li><a href="#Nesting">Nesting</a></li>
-                <li><a href="#Interpolation">Interpolation</a></li>
-                <li><a href="#At Rules">At Rules</a></li>
-                <li><a href="#Operators">Operators</a></li>
-                <li><a href="#Modules">Modules</a></li>
-            </ul>
+        <nav class="navbar sticky-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#Installation">Installation</a>
+                    <a class="nav-link" href="#Intro to Sass">Intro to Sass</a>
+                    <a class="nav-link" href="#Nesting">Nesting</a>
+                    <a class="nav-link" href="#Interpolation">Interpolation</a>
+                    <a class="nav-link" href="#At Rules">At Rules</a>
+                    <a class="nav-link" href="#Operators">Operators</a>
+                    <a class="nav-link" href="#Modules">Modules</a>
+                  </div>
+            </div>
         </nav>
 
         <div>
@@ -28,7 +33,7 @@
             <h3>Install Anywhere (Standalone)</h3>
             <div class="container">
                 <div class="image">
-                    <img src="../static/wig-install.gif">
+                    <img src="../static/images/wig-install.gif">
                 </div>
                 <div class="text">
                     <p>You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.</p>
@@ -130,7 +135,7 @@
 
         <div>
             <h1 id="Nesting"> Nesting </h1>
-            <img src="../static/bird-nest.jpg" style="width:300px;height:auto;" >
+            <img src="../static/images/bird-nest.jpg" style="width:300px;height:auto;" >
             <p>
                 <ul>Nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</ul>
                 <ul>Overly nested rules will result in overqualified CSS</ul> <!--hard to maintain and considered bad practice-->
@@ -185,36 +190,40 @@
         
         <div>
             <h1 id="At Rules">At Rules</h1>
-            <h2> Mix-Ins</h2>
-                MIXINS: do you have css classes with similar styles? Well you can create one “mixin” class with @mixin and include  which can then be used in tandem with the new classes you create
-                @mixin can take variables
-            <h2>Use</h2>
-                @use loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
-            <h2>Forward</h2>
-                @forward loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded with the @use rule.
-            <h2>Import</h2>
-                @import extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets.
-            <h2>Include</h2>
-                @include makes it easy to re-use chunks of styles.
-            <h2>Function</h2>
+            <h2>@MIXIN</h2>
+                <ul>CSS Classes with similar styles?</ul>
+                <ul>Create one MIXIN class that can be mentioned in other classes!</ul>
+            <h2>@INCLUDE</h2>
+                <ul>Allows user to include mixins in classes</ul>
+            <h2>@IMPORT</h2>
+                <ul>Extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets</ul>
+                <ul>Similar to @import in Java</ul>
+            <h2>@USE</h2>
+                <ul>Newer version of @import</ul>
+                <ul>Only imports desired module ONCE</ul>
+                <ul>Allows user to keep track of variables</ul> 
+            <h2>@FORWARD</h2>
+                <ul>Can be used prior to @use</ul>
+                <ul>"Forwards" mixins, functions, and variables from a stylesheet that are included in another stylesheet</ul>
+            <h2>@FUNCTION</h2>
                 @function defines custom functions that can be used in SassScript expressions.
                 <!-- Rounded switch -->
                 <!-- <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                 </label> -->
-            <h2>Extend</h2>
-                @extend allows selectors to inherit styles from one another.
-            <h2>At-Root</h2>
+            <h2>@EXTEND</h2>
+                <ul>Allows selectors to inherit styles from one another</ul>
+            <h2>@AT-ROOT</h2>
                 @at-root puts styles within it at the root of the CSS document.
-            <h2>Error</h2>
+            <h2>@ERROR</h2>
                 @error causes compilation to fail with an error message.
-            <h2>Warn</h2>
+            <h2>@WARN</h2>
                 @warn prints a warning without stopping compilation entirely.
-            <h2>Debug</h2>
-            @debug prints a message for debugging purposes.
+            <h2>@DEBUG</h2>
+                @debug prints a message for debugging purposes.
             <h2>Flow Control</h2>
-            Flow control rules like @if, @each, @for, and @while control whether or how many times styles are emitted.
+                Flow control rules like @if, @each, @for, and @while control whether or how many times styles are emitted.
             <table>
                 <th>@if controls whether or not a block is evaluated.</th>
                 <th>@each evaluates a block for each element in a list or each pair in a map.</th>
