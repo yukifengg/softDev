@@ -1,0 +1,3 @@
+1.
+when u click on a table cell, it sends an alert with the text inside the table cell on top of the other elements on the page.
+getElementByTagName returns an array of the elements with that tag 
